@@ -39,12 +39,13 @@ class CarRepository extends ServiceEntityRepository
         }
     }
 
-    public function testCarExist($id){
+    public function testCarExist($id): bool
+    {
 
         $car = $this->findOneById($id);
-        if(empty($car)){
+        if (empty($car)){
             return false;
-        }else{
+        } else {
             return true;
         }
 
