@@ -1,4 +1,4 @@
-image: jakzal/phpqa:latest
+image: iamkhaihoang/phpmysql:latest
 
 before_script:
     - composer install
