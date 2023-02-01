@@ -1,4 +1,4 @@
-image: iamkhaihoang/phpmysql:latest
+image: proboci/ubuntu:20.04-php8.1-mysql8.0
 
 before_script:
     - composer install
