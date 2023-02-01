@@ -1,4 +1,4 @@
-image: jakzal/phpqa:php7.4
+image: jakzal/phpqa:latest
 
 before_script:
     - composer install
