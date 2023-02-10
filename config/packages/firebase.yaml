@@ -1,0 +1,4 @@
+kreait_firebase:
+    projects:
+        my_project:
+            credentials: '%kernel.project_dir%/hecate-92720-firebase-adminsdk-r4xo5-078f19faca.json'

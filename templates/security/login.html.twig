@@ -2,6 +2,30 @@
 
 {% block title %}Log in!{% endblock %}
 
+{% block javascripts %}
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAdbGanftq3AGTalKAS1os2Nqa8kgdT28w",
+    authDomain: "hecate-92720.firebaseapp.com",
+    databaseURL: "https://hecate-92720-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "hecate-92720",
+    storageBucket: "hecate-92720.appspot.com",
+    messagingSenderId: "173440614550",
+    appId: "1:173440614550:web:17468a52039a38411082b7"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
+{% endblock %}
+
 {% block body %}
 <form method="post">
     {% if error %}
@@ -24,6 +48,8 @@
            value="{{ csrf_token('authenticate') }}"
     >
 
+    <a href="{{ path('app_firebase') }}">Connexion FIREBASE</a>
+
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
         See https://symfony.com/doc/current/security/remember_me.html
@@ -39,4 +65,42 @@
         Sign in
     </button>
 </form>
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  <!-- Header section containing title -->
+  <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+      <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
+        <a href="/"><h3>Firebase Authentication</h3></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="mdl-layout__content mdl-color--grey-100">
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+
+      <!-- Container for the demo -->
+      <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+        <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+          <h2 class="mdl-card__title-text">Google Authentication with Popup</h2>
+        </div>
+        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+          <p>Sign in with your Google account below.</p>
+
+          <!-- Button that handles sign-in/sign-out -->
+          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
+
+          <!-- Container where we'll display the user details -->
+          <div class="quickstart-user-details-container">
+            Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+            <div>Firebase auth <code>currentUser</code> object value:</div>
+            <pre><code id="quickstart-account-details">null</code></pre>
+            <div>Google OAuth Access Token:</div>
+            <pre><code id="quickstart-oauthtoken">null</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
 {% endblock %}

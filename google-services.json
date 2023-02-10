@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "173440614550",
+    "project_id": "hecate-92720",
+    "storage_bucket": "hecate-92720.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173440614550:android:d8152af52c78ac4f1082b7",
+        "android_client_info": {
+          "package_name": "com.iddeos.hecate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173440614550-9820li54qbkligihutflkvevid85vdps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_mGt65R2-ev3bZE6WczLrESsSYcji3ZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173440614550-9820li54qbkligihutflkvevid85vdps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
